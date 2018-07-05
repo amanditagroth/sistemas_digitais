@@ -1,4 +1,6 @@
-module trabalho0(
+
+
+module Trabalho0(
 
     input [9:0] SW,
     output reg [7:0] HEX0
@@ -84,13 +86,44 @@ always @(SW) begin
    else if (SW == 6'b100111) begin // Z
 		HEX0 <= 8'b00100100;
 	 end
-	 else begin
-		HEX0 <= 8'b11111111;
+	 else if (SW == 6'b011100) begin // 0
+		HEX0 <= 8'b01000000;
 	 end
+	 else if (SW == 6'b100000) begin // 1
+		HEX0 <= 8'b01001111;
+	 end
+	 else if (SW == 6'b101000) begin // 2
+		HEX0 <= 8'b00100100;
+	 end
+	 else if (SW == 6'b110000) begin // 3
+		HEX0 <= 8'b00110000;
+	 end
+	 else if (SW == 6'b110100) begin // 4
+		HEX0 <= 8'b00011001;
+	 end
+	 else if (SW == 6'b100100) begin // 5
+		HEX0 <= 8'b00010010;
+	 end
+	 else if (SW == 6'b111000) begin // 6
+		HEX0 <= 8'b00000010;
+	 end
+	 else if (SW == 6'b111100) begin // 7
+		HEX0 <= 8'b01111000;
+	 end
+	 else if (SW == 6'b101100) begin // 8
+		HEX0 <= 8'b01111111;
+	 end
+	 else if (SW == 6'b011000) begin // 9
+		HEX0 <= 8'b00010000;
+	 end
+	 else begin
+		HEX0 <= 8'b11111111;//DISPLAY DESLIGADO
+	 end
+	 
 
 end
 
 endmodule
 
 //implementação:
-// falta trocar de limite do contador que ser´a o reg, e fazer alterar de ledg e sw
+// SERÁ NECESSÁRIO SEPARAR DAS LETRAS E DOS NÚMEROS
