@@ -27,3 +27,5 @@ module testbench;
 	prody x (reset, CLOCK_50, k, l, S); //pq prody????
 	
 endmodule
+//***Implementação:***
+//falta fazer vetor de forma a matriz como vetor linha e vetor coluna
